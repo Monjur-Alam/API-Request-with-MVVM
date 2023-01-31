@@ -1,11 +1,16 @@
 # How to make an API Request in SwiftUI with MVVM pattern
 ![image](https://user-images.githubusercontent.com/40492085/211134190-aea91ee7-99c6-4a7a-aa27-2451d4addcc0.png)
+
+- [API Request](#api-request-)
+- [MVVM pattern](#mvvm-pattern-)
+- [Alamofire](#alamofire-)
+
 ## API Request 📩
 An API works by requesting information from a server and then receiving a response from it. Whenever you make a call to a server using an API, this counts as an API request. Some of the operations that are considered to be API requests include logins, queries, and saves, among others.
 
 Here we will learn about implementing Login API request to authenticate a user, using Alamofire with MVVM pattern.
 
-MVVM pattern 📃
+## MVVM pattern 📃
 ![image](https://user-images.githubusercontent.com/40492085/211134410-e3973604-927d-417a-b9c5-dd3c84f33567.png)
 
 Model-View-ViewModel (MVVM) is structured to separate program logic and user interface controls.
