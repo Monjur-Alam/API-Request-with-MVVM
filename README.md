@@ -26,7 +26,7 @@ Email and password for request and token property in response model to set the J
 
 Here we will use Login API from the site: https://reqres.in/
 
-```
+```swift
 //Request
 struct CreateLoginRequest: Codable {
   var email: String?
@@ -48,7 +48,7 @@ For the API request, we can simply use Alamofire request method by using their p
 
 ⏬ Below is the final class…
 
-```
+```swift
 import Alamofire
 public typealias FailureMessage = String
 
@@ -83,7 +83,7 @@ From the request it will return an API success response or a failure response by
 
 ⏬ Below is the final struct…
 
-```
+```swift
 import Alamofire
 struct APIServices {
   public static let shared = APIServices()
@@ -112,11 +112,11 @@ For getting user inputs to authenticate it using email and password.
 
 An instance for ViewModel will be declared for attaching it with the view.
 
-```
+```swift
 @StateObject var loginViewModel = LoginViewModel()
 ```
 Here we will add two TextField’s and a Login Button to authenticate the user.
-```
+```swift
 //Email field
       TextField("Email", text: $loginViewModel.youremailText)
         .font(Font.system(size: 15))
@@ -135,7 +135,7 @@ Here we will add two TextField’s and a Login Button to authenticate the user.
         ).padding()
 ```
 In Button action, we will make the Login request by passing required binding parameters, i.e. password and email which are attached with ViewModel.
-```
+```swift
 //Sign In Button
       Button("SignIn", action: {
         let createLoginRequest = CreateLoginRequest(email: loginViewModel.emailField, password: loginViewModel.passwordField)
@@ -148,7 +148,7 @@ In Button action, we will make the Login request by passing required binding par
 ObservableObject is used within a custom class or model to keep track of the state, a protocol within the Combine framework. It is used with the most powerful property wrapper @Published, used before any properties that should trigger changes for the view.
 
 Login View Model conforms to ObservableObject and has declared publishers for binding data.
-```
+```swift
 class LoginViewModel: ObservableObject {
   @Published var emailField: String = ""
   @Published var passwordField: String = ""
